@@ -1,23 +1,23 @@
 $('#mainpage').live("swiperight", function() {
     var target = $("#Plans");
-    $.mobile.changePage(target, {transition: "slide",
-                                    reverse: true}, true, true);
+    $.mobile.pageContainer.pagecontainer("change", target, {transition: "slide",
+                                    reverse: true});
 });
 
 $('#mainpage').live("swipeleft", function() {
     var target = $("#Cities");
-    $.mobile.changePage(target, {transition: "slide",
-                                    reverse: true}, true, true);
+    $.mobile.pageContainer.pagecontainer("change", target, {transition: "slide",
+                                    reverse: true});
 });
 
 $('#Plans').live("swiperight", function() {
     var target = $("#mainpage");
-    $.mobile.changePage(target, {transition: "slide",
-                                    reverse: true}, true, true);
+    $.mobile.pageContainer.pagecontainer("change", target, {transition: "slide",
+                                    reverse: true});
 });
 
 $('#Cities').live("swipeleft", function() {
     var target = $("#mainpage");
-    $.mobile.changePage(target, {transition: "slide",
-                                    reverse: true}, true, true);
+    $.mobile.pageContainer.pagecontainer("change", target, {transition: "slide",
+                                    reverse: true});
 });
