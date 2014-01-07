@@ -290,6 +290,9 @@ label.narrow-control:empty + .wide-control {
     margin-right: 5px;
   }
 }
+.ui-btn-hidden {
+  display: none;
+}
 .ui-controlgroup-horizontal.uib-jqm-flex {
   width: 100%;
 }
@@ -324,9 +327,6 @@ label.narrow-control:empty + .wide-control {
 .wrapping-col.horiz-area > .uib-jqm-flex {
   width: auto;
   display: inline-block;
-}
-.ui-btn-hidden {
-  display: none;
 }
 .widget.ui-checkbox,
 .widget.ui-radio,

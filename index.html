@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--HTML5 doctype-->
 <html>
 
@@ -35,14 +35,13 @@
   <script type="application/javascript" src="justgage/gauges.js"></script>
   <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.1.0.min.js"></script>
 
-     <script type="text/javascript">
-         var client = new WindowsAzure.MobileServiceClient(
+  <script type="text/javascript">
+   var client = new WindowsAzure.MobileServiceClient(
             "https://mecation.azure-mobile.net/",
             "CtuktOZmQaNNDuzWwLAmLyryJbFZTt35"
         );
-
-
-     </script>
+  </script>
+  <script type="application/javascript" src="js/index_user_scripts.js"></script>
  </head>
 
  <body>
@@ -156,7 +155,7 @@
          <a class="widget uib_w_30 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Add Person</a>
          <a class="widget uib_w_31 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Remove Person</a>
          <a class="widget uib_w_32 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Add Event</a>
-         <a class="widget uib_w_34 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Home</a>
+         <a class="widget uib_w_34 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" href="#mainpage" data-transition="fade">Home</a>
          <span class="uib_shim"></span>
         </div>
        </div>
@@ -206,12 +205,10 @@
           </iframe>
          </div><a class="widget uib_w_36 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Inspiration</a>
          <a class="widget uib_w_37 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">What to Eat</a>
-         <a
-         class="widget uib_w_38 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">What to Do</a>
-          <a class="widget uib_w_40 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Create a Trip</a>
-          <a
-          class="widget uib_w_41 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Getting There</a>
-           <span class="uib_shim"></span>
+         <a class="widget uib_w_38 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">What to Do</a>
+         <a class="widget uib_w_40 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Create a Trip</a>
+         <a class="widget uib_w_41 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Getting There</a>
+         <span class="uib_shim"></span>
         </div>
        </div>
        <span class="uib_shim"></span>
