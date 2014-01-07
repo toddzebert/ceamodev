@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+ <head>
+  <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+  <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+  <title>Your New Application</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <style type="text/css">
+   /* Prevent copy paste for all elements except text fields */
+   		*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+   		input, textarea  { -webkit-user-select:text; }
+  </style>
+  <script src="intelxdk.js"></script>
+  <script type="text/javascript">
+   /* This code is used to run as soon as Intel activates */
+   		var onDeviceReady=function(){
+   		//hide splash screen
+   		intel.xdk.device.hideSplashScreen();
+   		};
+   		document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+  </script>
+  <script type="application/javascript" src="js/jquery.min.js"></script>
+  <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+  <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+  <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+  <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+  <script type="application/javascript" src="sidebar/js/swipe.js"></script>
+  <script type="application/javascript" src="justgage/js/raphael.min.js"></script>
+  <script type="application/javascript" src="justgage/js/justgage.min.js"></script>
+  <script type="application/javascript" src="justgage/gauges.js"></script>
+ </head>
+
+ <body>
+  <!-- content goes here-->
+  <div class="uwrap">
+   <div class="upage" id="mainpage" data-role="page">
+    <div class="upage-outer">
+     <div data-role="header" class="container-group inner-element uib_w_8" data-uib="jquery_mobile/header" data-ver="0">
+      <h1>We-cation</h1>
+      <div class="widget-container wrapping-col single-centered"></div>
+      <div class="widget-container content-area horiz-area wrapping-col left"></div>
+      <div class="widget-container content-area horiz-area wrapping-col right"></div>
+     </div>
+     <div class="upage-content" id="mainsub">
+
+      <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+
+         <div class="table-thing with-label widget uib_w_1 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+          <label class="narrow-control label-inline">What?</label>
+          <input class="wide-control" type="text" placeholder="What do you want to do?">
+         </div>
+         <div data-role="collapsible" class="no_wrap widget uib_w_2" data-uib="jquery_mobile/collapsible" data-ver="0" data-collapsed="false">
+          <h4>Future</h4>
+          <div class="col uib_col_3 single-col" data-uib="layout/col" data-ver="0">
+           <div class="widget-container content-area vertical-col">
+            <span class="uib_shim"></span>
+           </div>
+          </div>
+          <div class="table-thing with-label no_wrap widget uib_w_5 d-margins" data-uib="jquery_mobile/radio_button_group" data-ver="0">
+           <label class="narrow-control label-inline">Day</label>
+           <fieldset data-role="controlgroup" class="widget-container wide-control uib-jqm-flex" data-child-name="jqm-radio-group-0"
+           data-type="horizontal">
+            <div class="ui-radio widget uib_w_6" data-uib="jquery_mobile/radio_button" data-ver="0">
+             <label>Today
+              <input type="radio" name="jqm-radio-group-0" data-mini="true">
+             </label>
+            </div>
+            <div class="ui-radio widget uib_w_7" data-uib="jquery_mobile/radio_button" data-ver="0">
+             <label>'morrow
+              <input type="radio" name="jqm-radio-group-0" data-mini="true">
+             </label>
+            </div>
+           </fieldset>
+          </div>
+          <div class="widget uib_w_3 no_wrap with-label d-margins" data-uib="jquery_mobile/slider" data-ver="0">
+           <label class="narrow-control label-inline">Start</label>
+           <div class="wide-control">
+            <input type="range" value="9" min="0" max="24" step="1" data-mini="true">
+           </div>
+          </div>
+          <div class="widget uib_w_4 no_wrap with-label d-margins" data-uib="jquery_mobile/slider" data-ver="0">
+           <label class="narrow-control label-inline">Duration</label>
+           <div class="wide-control">
+            <input type="range" value="2" min="0" max="12" step="1" data-mini="true">
+           </div>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_4 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_9 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+          <ul data-role="listview">
+           <li class="widget uib_w_10" data-uib="jquery_mobile/listitem" data-ver="0"><span>Listitem</span>
+           </li>
+           <li class="widget uib_w_11" data-uib="jquery_mobile/listitem" data-ver="0"><span>Listitem</span>
+           </li>
+           <li class="widget uib_w_12" data-uib="jquery_mobile/listitem" data-ver="0"><span>Listitem</span>
+           </li>
+          </ul>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_6 row-height-6" data-uib="layout/row" data-ver="0">
+
+
+       <div class="col uib_col_7 col-0" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <a class="widget uib_w_13 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Setup</a>
+         <span
+         class="uib_shim"></span>
+        </div>
+       </div><span class="uib_shim"></span>
+      </div>
+     </div>
+     <!-- /upage-content -->
+
+    </div>
+    <!-- /upage-outer -->
+
+   </div>
+   <div class="upage" id="Cities" data-role="page">
+    <div class="upage-outer">
+     <div id="Citiessub" class="upage-content ">
+     </div>
+    </div>
+    <!-- /upage-outer -->
+   </div>
+   <div class="upage" id="Plans" data-role="page">
+    <div class="upage-outer">
+     <div id="Planssub" class="upage-content ">
+
+
+
+
+
+
+
+
+
+      <div class="grid grid-pad urow uib_row_11 row-height-11" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_19 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_14 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Hackathon 8am-8pm</p>
+          </div>
+         </div>
+         <div class="widget uib_w_15 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Venetian, Suite 4102</p>
+          </div>
+         </div>
+         <div class="widget uib_w_19 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Thomas, Mindy, Todd</p>
+          </div>
+         </div>
+         <div class="uib-button-bar default-button-bar-height widget uib_w_16 d-margins" data-uib="media/button_bar" data-ver="0">
+          <a class="uib-graphic-button hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_17 d-margins default-graphic-sizing media-button-text-bottom"
+          data-uib="media/graphic_button" data-ver="0">
+           <span class="uib-caption">Join</span>
+          </a>
+          <a class="uib-graphic-button hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_18 d-margins media-button-text-bottom shortButton"
+          data-uib="media/graphic_button" data-ver="0">
+           <span class="uib-caption">Comment</span>
+          </a>
+         </div>
+         <div data-role="collapsible" class="no_wrap widget uib_w_20" data-uib="jquery_mobile/collapsible" data-ver="0" data-collapsed="false">
+          <h4>Conversation</h4>
+          <div class="col uib_col_23 single-col" data-uib="layout/col" data-ver="0">
+           <div class="widget-container content-area vertical-col">
+            <span class="uib_shim"></span>
+           </div>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_12 row-height-12" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_24 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col left">
+
+         <div class="widget uib_w_21 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Lunch 11:30-1:00</p>
+          </div>
+         </div>
+         <div class="widget uib_w_22 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Venetian, Suite 4102</p>
+          </div>
+         </div>
+         <div class="widget uib_w_23 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Bourdain, ...</p>
+          </div>
+         </div>
+         <div class="uib-button-bar default-button-bar-height widget uib_w_24 d-margins" data-uib="media/button_bar" data-ver="0">
+          <a class="uib-graphic-button hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_25 d-margins media-button-text-bottom"
+          data-uib="media/graphic_button" data-ver="0">
+           <span class="uib-caption">join</span>
+          </a>
+          <a class="uib-graphic-button hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_26 d-margins media-button-text-bottom"
+          data-uib="media/graphic_button" data-ver="0">
+           <span class="uib-caption">comment</span>
+          </a>
+          <a class="uib-graphic-button hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_27 d-margins media-button-text-bottom"
+          data-uib="media/graphic_button" data-ver="0">
+           <span class="uib-caption">edit</span>
+          </a>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+
+      <div class="grid grid-pad urow uib_row_13 row-height-13" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_25 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_28 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>CES Happy Hour 17:00-19:00</p>
+          </div>
+         </div>
+         <div class="widget uib_w_29 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Vapid Nightclub, Luxor</p>
+          </div>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+    </div>
+    <!-- /upage-outer -->
+   </div>
+   <!-- /upage -->
+
+  </div>
+  <!-- /uwrap -->
+ </body>
+
+</html>
