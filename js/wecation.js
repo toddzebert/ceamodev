@@ -20,7 +20,7 @@ $(document).ready(function () {
     });
     
     $( 'input[type=range]' ).on( "change", function(event, ui) {
-        event.stopPropagation();
+        event.stopImmediatePropagation();
     });
 });
 

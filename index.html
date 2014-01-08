@@ -27,6 +27,12 @@
    		document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
   </script>
   <script type="application/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).bind("mobileinit", function(){
+        // $.event.special.swipe.horizontalDistanceThreshold (default: 30px);
+        $.event.special.swipe.verticalDistanceThreshold (default: 150px);
+    });
+</script>
   <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
   <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
   <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
