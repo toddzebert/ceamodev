@@ -18,6 +18,10 @@ $(document).ready(function () {
         var target = $("#mainpage");
         $.mobile.pageContainer.pagecontainer("change", target, {transition: "slide", reverse: true});
     });
+    
+    $( 'input[type=range]' ).on( "change", function(event, ui) {
+        event.stopPropagation();
+    });
 });
 
 function AddActivity() {
