@@ -36,9 +36,11 @@ function AddActivity() {
 $('#status-submit').click(AddActivity);
 
 $(function () {
+    /*
     client.getTable("activity").each(function (key, newvalue) {
         $('#mainpage').find('[data-template-tag=' + key + ']').Html(newvalue);
     });
+    */
 });
 
 function AddPerson() {
@@ -80,3 +82,8 @@ function PopoulateTemplate(dom, values) {
 $(function () {
 
 });
+
+window.onerror = function (msg, url, line) {
+    //alert("Error caught: " + msg + "\n" + url +':'+ line);
+};
+
