@@ -16,8 +16,7 @@
    		input, textarea  { -webkit-user-select:text; }
   </style>
   <script src="intelxdk.js"></script>
-  <script src="intelxdk.js"></script>
-  <script src="xhr.js"></script>
+  <!-- script src="xhr.js"></script -->
   <script src="http://debug-software.intel.com/target/target-script-min.js#Ftk9hVIkbU27vuRFqCYKsJ0etL3C4u1JLMYWeBt5Aus"></script>
   <script type="text/javascript">
    /* This code is used to run as soon as Intel activates */
@@ -39,6 +38,7 @@
   <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.1.0.min.js"></script>
 
   <script type="text/javascript">
+      alert(document.location.hostname);
    var client = new WindowsAzure.MobileServiceClient(
             "https://mecation.azure-mobile.net/",
             "CtuktOZmQaNNDuzWwLAmLyryJbFZTt35"
