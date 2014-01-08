@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--HTML5 doctype-->
 <html>
 
@@ -45,7 +45,7 @@
 
   <script type="application/javascript" src="js/index_user_scripts.js"></script>
 
-         
+
  </head>
 
  <body>
@@ -67,8 +67,8 @@
 
 
          <div class="table-thing with-label widget uib_w_1 d-margins" data-uib="jquery_mobile/input" data-ver="0">
-          <label class="narrow-control label-inline">We:</label>
-          <input class="wide-control" type="text" placeholder="are going to do ...">
+          <label class="narrow-control label-inline" for="status">We:</label>
+          <input class="wide-control" type="text" placeholder="are going to do ..." id="status">
          </div>
          <div data-role="collapsible" class="no_wrap widget uib_w_2" data-uib="jquery_mobile/collapsible" data-ver="0" data-collapsed="false">
           <h4>Future</h4>
@@ -77,47 +77,69 @@
             <span class="uib_shim"></span>
            </div>
           </div>
-          <div class="table-thing with-label no_wrap widget uib_w_5 d-margins" data-uib="jquery_mobile/radio_button_group" data-ver="0">
+          <div class="table-thing with-label no_wrap widget uib_w_5 d-margins" data-uib="jquery_mobile/radio_button_group" data-ver="0"
+          id="date">
            <label class="narrow-control label-inline">Day</label>
            <fieldset data-role="controlgroup" class="widget-container wide-control uib-jqm-flex" data-child-name="jqm-radio-group-0"
            data-type="horizontal">
             <div class="ui-radio widget uib_w_6" data-uib="jquery_mobile/radio_button" data-ver="0">
              <label>Today
-              <input type="radio" name="jqm-radio-group-0" data-mini="true">
+              <input type="radio" name="jqm-radio-group-0" data-mini="true" id="date-today">
              </label>
             </div>
             <div class="ui-radio widget uib_w_7" data-uib="jquery_mobile/radio_button" data-ver="0">
              <label>'morrow
-              <input type="radio" name="jqm-radio-group-0" data-mini="true">
+              <input type="radio" name="jqm-radio-group-0" data-mini="true" id="date-tomorrow">
              </label>
             </div>
            </fieldset>
           </div>
-          <div class="widget uib_w_3 no_wrap with-label d-margins" data-uib="jquery_mobile/slider" data-ver="0">
-           <label class="narrow-control label-inline">Start</label>
+          <div class="widget uib_w_3 no_wrap with-label d-margins" data-uib="jquery_mobile/slider" data-ver="0" id="start-time">
+           <label class="narrow-control label-inline" for="start-time">Start</label>
            <div class="wide-control">
             <input type="range" value="9" min="0" max="24" step="1" data-mini="true">
            </div>
           </div>
-          <div class="widget uib_w_4 no_wrap with-label d-margins" data-uib="jquery_mobile/slider" data-ver="0">
-           <label class="narrow-control label-inline">Duration</label>
+          <div class="widget uib_w_4 no_wrap with-label d-margins" data-uib="jquery_mobile/slider" data-ver="0" id="duration">
+           <label class="narrow-control label-inline" for="duration">Duration</label>
            <div class="wide-control">
             <input type="range" value="2" min="0" max="12" step="1" data-mini="true">
            </div>
           </div>
-         </div><span class="uib_shim"></span>
+         </div><a class="widget uib_w_46 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="status-submit">Submit</a>
+         <span
+         class="uib_shim"></span>
         </div>
        </div>
        <span class="uib_shim"></span>
       </div>
 
-      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+      <div id="status-template" class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0" style="display:none;">
        <div class="col uib_col_4 col-0_12-12" data-uib="layout/col" data-ver="0">
         <div class="widget-container content-area vertical-col">
 
 
-         <li class="widget uib_w_42" data-uib="jquery_mobile/listitem" data-ver="0"><span>Listitem</span>
-         </li><span class="uib_shim"></span>
+         <div class="widget uib_w_43 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div data-template-tag="user-name">
+           <p>user-name</p>
+          </div>
+         </div>
+         <div class="widget uib_w_44 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div  data-template-tag="status">
+           <p>status</p>
+          </div>
+         </div>
+         <div class="widget uib_w_45 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div  data-template-tag="date">
+           <p>date</p>
+          </div>
+         </div><span class="uib_shim"></span>
         </div>
        </div>
        <span class="uib_shim"></span>
