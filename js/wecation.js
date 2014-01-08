@@ -22,6 +22,10 @@ $(document).ready(function () {
     $( 'input[type=range]' ).on( "change", function(event, ui) {
         event.stopImmediatePropagation();
     });
+    
+    $( 'input[type=range]' ).on( "slidestop", function(event, ui) {
+        event.stopImmediatePropagation();
+    });
 });
 
 function AddActivity() {
