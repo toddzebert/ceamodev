@@ -2,3 +2,8 @@ ceamodev
 ========
 
 CEA MoDov
+
+This was a project for the CEA/MoDev 2014 hackathon.
+
+It's build with the Intel XDK development environment using Codova.
+It was my first experience with the XDK, and I was the sole developer on the team.
